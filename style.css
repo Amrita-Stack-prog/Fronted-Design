@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  font-family: "Nunito", sans-serif; 
+  background-image: url("./mainBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+    background-position: center;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.692);
+    backdrop-filter:blur(10px);
+    color: white;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.nav-opt{
+    list-style: none;
+    display: flex;
+}
+.nav-opt li{
+    margin-left: 20px;
+    
+}
+.nav-opt li a{
+    color: white;
+    text-decoration: none;
+}
+.nav-opt li a:hover{
+    color: aqua;
+}
+.icon{
+    font-size: 1.6rem;
+    display: none;
+}
+.container{
+    /* background-color: rgba(0, 0, 0, 0.223); */
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.539);
+
+}
+
+.card{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.186);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    padding: 40px;
+    width: 650px;
+    text-align: center;
+    border-radius: 1rem;
+}
+.card h1{
+    font-size: 40px;
+   padding: 10px;
+}
+.card p{
+    font-size: 18px;
+    
+}
+.offer-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card1-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.card1{
+    width: 30%;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 1px solid white;
+    transition: 0.2s;
+}
+.card1:hover{
+    transform: scale(1.02);
+    border: 1px solid aqua;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.886);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+@media(max-width:750px){
+    .card{
+        width: 350px;
+    }
+}
+@media(max-width:450px){
+    .card{
+        width: 180px;
+        padding: 30px;
+    }
+}
+@media(max-width:420px){
+    .container{
+        background-size: fixed;
+    }
+}
+@media(max-width:600px){
+    nav ul li{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+    }
+}
